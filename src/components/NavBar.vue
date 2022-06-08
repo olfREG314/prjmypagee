@@ -28,7 +28,6 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Hubballi&display=swap");
 nav {
   display: grid;
@@ -74,8 +73,8 @@ nav {
 }
 .nav-link ul li button a:hover {
   text-decoration: underline;
+  font-family: "Fredericka the Great", cursive;
 }
 .nav-link ul li button a:active {
-  font-family: "Franklin Gothic Medium", sans-serif;
 }
 </style>

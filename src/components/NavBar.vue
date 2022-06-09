@@ -65,6 +65,7 @@ nav {
   letter-spacing: 0.25em;
   /* tag */
   color: var(--primaryGrey);
+  /* max-width: 133px; */
 }
 .nav-link ul li button a:link {
   color: var(--primary-grey);

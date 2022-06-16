@@ -4,7 +4,9 @@
       <ul>
         <li v-for="nav in navList" :key="nav">
           <button>
-            <a :href="nav.navLink">{{ nav.navName }}</a>
+            <router-link :to="{ name: nav.navLink }">{{
+              nav.navName
+            }}</router-link>
           </button>
         </li>
       </ul>
@@ -17,10 +19,10 @@ export default {
   data() {
     return {
       navList: [
-        { navName: "profile", navLink: "#" },
-        { navName: "projects", navLink: "#" },
-        { navName: "notes", navLink: "#" },
-        { navName: "sayHi!", navLink: "#" },
+        { navName: "profile", navLink: "Profile" },
+        { navName: "projects", navLink: "Projects" },
+        { navName: "notes", navLink: "Notes" },
+        { navName: "sayHi!", navLink: "SayHi" },
       ],
     };
   },
@@ -28,7 +30,6 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Hubballi&display=swap");
 nav {
   display: grid;
   position: sticky;
@@ -76,6 +77,6 @@ nav {
   text-decoration: underline;
   font-family: "Fredericka the Great", cursive;
 }
-.nav-link ul li button a:active {
-}
+/* .nav-link ul li button a:active {
+} */
 </style>

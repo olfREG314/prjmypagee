@@ -2,81 +2,95 @@
   <nav>
     <div class="nav-link">
       <ul>
-        <li v-for="nav in navList" :key="nav">
+        <li v-for="nav in navList" :key="nav" :class="nav.navClass">
           <button>
             <router-link :to="{ name: nav.navLink }">{{
               nav.navName
             }}</router-link>
+            <div class="button-bar"></div>
           </button>
         </li>
       </ul>
     </div>
   </nav>
 </template>
-
+// =========================================================
 <script>
 export default {
   data() {
     return {
       navList: [
-        { navName: "profile", navLink: "Profile" },
-        { navName: "projects", navLink: "Projects" },
-        { navName: "notes", navLink: "Notes" },
-        { navName: "sayHi!", navLink: "SayHi" },
+        { navName: "profile", navLink: "Profile", navClass: "profile" },
+        { navName: "projects", navLink: "Projects", navClass: "projects" },
+        { navName: "notes", navLink: "Notes", navClass: "notes" },
+        { navName: "sayHi!", navLink: "SayHi", navClass: "sayhi" },
       ],
     };
   },
 };
 </script>
-
+// =========================================================
 <style scoped>
+/* ========== UPDATE FOR REF. ============================ */
+/* :root {
+  --deepGrey: #545454;
+  --nrmlGrey: #757575;
+  --lightGrey: #cfcfcf;
+} */
+
+/* ================================================== */
 nav {
-  display: grid;
-  position: sticky;
+  margin: 0px;
+  padding: 0px;
   width: 100vw;
-  height: 55px;
+  min-height: 18px;
+  border-bottom: 2px solid black;
+  position: fixed;
   background-color: white;
-  border-bottom: 2px solid #000;
-  align-items: center;
-  justify-content: center;
 }
 .nav-link ul {
-  margin: 0px;
-  padding: 0px;
+  display: grid;
+  margin: 10px auto;
+  padding: auto;
+  grid-template-columns: repeat(12, minmax(auto, 150px));
+  grid-template-areas: " . . . . . . . . profile projects notes sayhi";
+}
+.profile {
+  grid-area: profile;
+}
+.projects {
+  grid-area: projects;
+}
+.notes {
+  grid-area: notes;
+}
+.sayhi {
+  grid-area: sayhi;
 }
 .nav-link ul li {
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav-link ul li button {
-  /* font-family: 'Fredericka the Great', cursive; */
-  font-family: "Hubballi", cursive;
-  background-color: white;
-  padding: 5px;
-  border: none;
-  margin: 0px 18px;
+  list-style-type: none;
   text-align: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 23px;
-  /* identical to box height */
-  letter-spacing: 0.25em;
-  /* tag */
-  color: var(--primaryGrey);
-  /* max-width: 133px; */
+  justify-content: center;
 }
-.nav-link ul li button a:link {
-  color: var(--primary-grey);
-  text-decoration-line: none;
-  text-transform: uppercase;
+.nav-link ul li button {
+  border: none;
+  background-color: transparent;
+  font-family: "Hubballi";
+  font-size: 28px;
+  justify-content: center;
+  text-align: center;
 }
-.nav-link ul li button a:hover {
-  text-decoration: underline;
-  font-family: "Fredericka the Great", cursive;
+.nav-link ul li button .button-bar {
+  margin-top: 4px;
+  max-width: 40px;
+  border: 1px solid var(--deepGrey);
+  border-radius: 10px;
+  background-color: var(--deepGrey);
 }
-/* .nav-link ul li button a:active {
-} */
+.nav-link ul li button a {
+  color: var(--deepGrey);
+  text-decoration: none;
+}
+.nav-link ul li button a {
+}
 </style>

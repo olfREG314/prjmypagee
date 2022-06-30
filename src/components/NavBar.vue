@@ -7,8 +7,8 @@
             <router-link :to="{ name: nav.navLink }">{{
               nav.navName
             }}</router-link>
-            <div class="button-bar"></div>
           </button>
+          <div class="button-bar"></div>
         </li>
       </ul>
     </div>
@@ -45,7 +45,7 @@ nav {
   width: 100vw;
   min-height: 18px;
   border-bottom: 2px solid black;
-  position: fixed;
+  /* position: fixed; */
   background-color: white;
 }
 .nav-link ul {
@@ -80,8 +80,8 @@ nav {
   justify-content: center;
   text-align: center;
 }
-.nav-link ul li button .button-bar {
-  margin-top: 4px;
+.nav-link ul li .button-bar {
+  margin: 0px 4px;
   max-width: 40px;
   border: 1px solid var(--deepGrey);
   border-radius: 10px;
@@ -91,6 +91,8 @@ nav {
   color: var(--deepGrey);
   text-decoration: none;
 }
-.nav-link ul li button a {
+
+.nav-link ul li button .router-link-active {
+  color: rgb(121, 194, 11);
 }
 </style>

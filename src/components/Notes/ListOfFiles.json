@@ -1,0 +1,52 @@
+{
+  "content": [
+    {
+      "fileName": "archCraft_linux",
+      "fileType": "markdown",
+      "extension": ".md",
+      "createDate": "24122022",
+      "updateDate": "25122022",
+      "fileSize": "12kb"
+    },
+    {
+      "fileName": "arduino_D1_R2_in_arch",
+      "fileType": "markdown",
+      "extension": ".md",
+      "createDate": "24122022",
+      "updateDate": "25122022",
+      "fileSize": "24kb"
+    },
+    {
+      "fileName": "howToStreamVideo",
+      "fileType": "markdown",
+      "extension": ".md",
+      "createDate": "24122022",
+      "updateDate": "25122022",
+      "fileSize": "5kb"
+    },
+    {
+      "folder": "mbfln",
+      "createDate": "24122022",
+      "updateDate": "25122022",
+      "folderSize": "5kb",
+      "content": [
+        {
+          "folder": "LINUX",
+          "createDate": "24122022",
+          "updateDate": "25122022",
+          "folderSize": "5kb",
+          "content": [
+            {
+              "fileName": "againSettingUpLinux",
+              "fileType": "markdown",
+              "extension": ".md",
+              "createDate": "24122022",
+              "updateDate": "25122022",
+              "fileSize": "5kb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,7 @@
     </section>
     <section class="middle">
       <h1>middle</h1>
+      <Content />
     </section>
     <section class="right">
       <h1>right</h1>
@@ -16,8 +17,9 @@
 
 <script>
 import FileNav from "@/components/Notes/FileNav.vue";
+import Content from "@/components/Notes/MiddleContent/Content.vue";
 export default {
-  components: { FileNav },
+  components: { FileNav, Content },
 };
 </script>
 
